@@ -3,6 +3,7 @@ package com.kryptkode.domain.utils
 import com.kryptkode.domain.charactersearch.entities.Character
 import com.kryptkode.domain.charactersearch.entities.Film
 import com.kryptkode.domain.charactersearch.entities.Planet
+import com.kryptkode.domain.charactersearch.entities.Specie
 import com.kryptkode.domain.utils.DataFactory.randomString
 
 object MockDataFactory {
@@ -25,6 +26,14 @@ object MockDataFactory {
 
     fun makePlanet(): Planet {
         return Planet(
+                randomString(),
+                randomString(),
+        )
+    }
+
+    fun makeSpecie(): Specie {
+        return Specie(
+                randomString(),
                 randomString(),
                 randomString(),
         )
