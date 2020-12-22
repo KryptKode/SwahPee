@@ -15,6 +15,7 @@ buildscript {
 
 plugins {
     buildSrcVersions
+    id(ScriptsPlugins.quality)
 }
 
 allprojects {
