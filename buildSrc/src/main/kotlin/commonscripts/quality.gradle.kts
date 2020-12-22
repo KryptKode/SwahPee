@@ -4,6 +4,7 @@ import io.gitlab.arturbosch.detekt.Detekt
 
 plugins {
     id("io.gitlab.arturbosch.detekt")
+    id ("org.jlleitschuh.gradle.ktlint")
 }
 
 val detektAll by tasks.registering(Detekt::class) {
@@ -35,4 +36,8 @@ val detektAll by tasks.registering(Detekt::class) {
 tasks.register("runStaticAnalysis") {
     description = "Run static analysis on the Android codebase."
     dependsOn(detektAll)
+}
+
+ktlint {
+    android.set(true)
 }
