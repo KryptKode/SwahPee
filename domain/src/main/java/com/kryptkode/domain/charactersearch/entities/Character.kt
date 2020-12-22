@@ -1,0 +1,8 @@
+package com.kryptkode.domain.charactersearch.entities
+
+data class Character(
+    val name: String,
+    val birthYear: String,
+    val height: String,
+    val url: String
+)

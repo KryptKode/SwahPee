@@ -6,6 +6,19 @@
  */
 object Libs {
     /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
+    const val kotlinx_coroutines_android: String =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:" +
+            Versions.org_jetbrains_kotlinx_kotlinx_coroutines
+
+    /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
+    const val kotlinx_coroutines_test: String = "org.jetbrains.kotlinx:kotlinx-coroutines-test:" +
+            Versions.org_jetbrains_kotlinx_kotlinx_coroutines
+
+    /**
      * https://kotlinlang.org/
      */
     const val kotlin_gradle_plugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:" +
@@ -72,7 +85,22 @@ object Libs {
     const val material: String = "com.google.android.material:material:" + Versions.material
 
     /**
+     * https://github.com/pinterest/ktlint
+     */
+    const val ktlint: String = "com.pinterest:ktlint:" + Versions.ktlint
+
+    /**
      * https://developer.android.com/studio
      */
     const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2
+
+    /**
+     * http://mockk.io
+     */
+    const val mockk: String = "io.mockk:mockk:" + Versions.mockk
+
+    /**
+     * http://github.com/google/truth
+     */
+    const val truth: String = "com.google.truth:truth:" + Versions.truth
 }
