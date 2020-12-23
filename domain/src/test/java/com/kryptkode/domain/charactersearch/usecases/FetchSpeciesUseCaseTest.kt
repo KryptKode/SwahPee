@@ -4,8 +4,8 @@ import com.google.common.truth.Truth
 import com.kryptkode.domain.charactersearch.entities.Specie
 import com.kryptkode.domain.charactersearch.repo.CharacterDetailRepository
 import com.kryptkode.domain.dispatchers.AppDispatchers
-import com.kryptkode.domain.utils.DataFactory.randomString
 import com.kryptkode.domain.utils.MockDataFactory.makeSpecie
+import com.kryptkode.testshared.DataFactory.randomString
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.unmockkAll

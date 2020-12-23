@@ -4,8 +4,8 @@ import com.google.common.truth.Truth.assertThat
 import com.kryptkode.domain.charactersearch.entities.Planet
 import com.kryptkode.domain.charactersearch.repo.CharacterDetailRepository
 import com.kryptkode.domain.dispatchers.AppDispatchers
-import com.kryptkode.domain.utils.DataFactory.randomString
 import com.kryptkode.domain.utils.MockDataFactory.makePlanet
+import com.kryptkode.testshared.DataFactory.randomString
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.unmockkAll

@@ -1,4 +1,4 @@
-package com.kryptkode.domain.utils
+package com.kryptkode.testshared
 
 import java.util.*
 import java.util.concurrent.ThreadLocalRandom

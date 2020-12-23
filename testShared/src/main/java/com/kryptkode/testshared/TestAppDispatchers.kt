@@ -1,4 +1,4 @@
-package com.kryptkode.domain.utils
+package com.kryptkode.testshared
 
 import com.kryptkode.domain.dispatchers.AppDispatchers
 import kotlinx.coroutines.CoroutineDispatcher

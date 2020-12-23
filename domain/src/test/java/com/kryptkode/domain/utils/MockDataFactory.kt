@@ -4,7 +4,7 @@ import com.kryptkode.domain.charactersearch.entities.Character
 import com.kryptkode.domain.charactersearch.entities.Film
 import com.kryptkode.domain.charactersearch.entities.Planet
 import com.kryptkode.domain.charactersearch.entities.Specie
-import com.kryptkode.domain.utils.DataFactory.randomString
+import com.kryptkode.testshared.DataFactory.randomString
 
 object MockDataFactory {
 
