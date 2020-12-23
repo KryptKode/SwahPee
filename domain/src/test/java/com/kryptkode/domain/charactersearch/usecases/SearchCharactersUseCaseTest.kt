@@ -4,7 +4,7 @@ import com.google.common.truth.Truth.assertThat
 import com.kryptkode.domain.charactersearch.entities.Character
 import com.kryptkode.domain.charactersearch.repo.SearchCharactersRepository
 import com.kryptkode.domain.dispatchers.AppDispatchers
-import com.kryptkode.domain.utils.MockDataFactory.makeCharacter
+import com.kryptkode.domain.utils.MockDataFactory.makeDomainCharacter
 import com.kryptkode.testshared.DataFactory.randomString
 import io.mockk.every
 import io.mockk.mockk
@@ -52,7 +52,7 @@ class SearchCharactersUseCaseTest {
     @Test
     fun `searching characters returns data`() = runBlocking {
         stubDispatchers()
-        val testCharacters = listOf(makeCharacter(), makeCharacter())
+        val testCharacters = listOf(makeDomainCharacter(), makeDomainCharacter())
         stubRepo(testCharacters)
 
         val testQuery = randomString()

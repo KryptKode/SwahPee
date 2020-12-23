@@ -4,7 +4,7 @@ import com.google.common.truth.Truth.assertThat
 import com.kryptkode.domain.charactersearch.entities.Planet
 import com.kryptkode.domain.charactersearch.repo.CharacterDetailRepository
 import com.kryptkode.domain.dispatchers.AppDispatchers
-import com.kryptkode.domain.utils.MockDataFactory.makePlanet
+import com.kryptkode.domain.utils.MockDataFactory.makeDomainPlanet
 import com.kryptkode.testshared.DataFactory.randomString
 import io.mockk.every
 import io.mockk.mockk
@@ -53,7 +53,7 @@ class FetchPlanetUseCaseTest {
     @Test
     fun `fetching planet returns data`() = runBlocking {
         stubDispatchers()
-        val testPlanet = makePlanet()
+        val testPlanet = makeDomainPlanet()
         stubRepo(testPlanet)
 
         val testUrl = randomString()

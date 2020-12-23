@@ -8,7 +8,7 @@ import com.kryptkode.testshared.DataFactory.randomString
 
 object MockDataFactory {
 
-    fun makeCharacter(): Character {
+    fun makeDomainCharacter(): Character {
         return Character(
             randomString(),
             randomString(),
@@ -17,21 +17,21 @@ object MockDataFactory {
         )
     }
 
-    fun makeFilm(): Film {
+    fun makeDomainFilm(): Film {
         return Film(
                 randomString(),
                 randomString(),
         )
     }
 
-    fun makePlanet(): Planet {
+    fun makeDomainPlanet(): Planet {
         return Planet(
                 randomString(),
                 randomString(),
         )
     }
 
-    fun makeSpecie(): Specie {
+    fun makeDomainSpecie(): Specie {
         return Specie(
                 randomString(),
                 randomString(),

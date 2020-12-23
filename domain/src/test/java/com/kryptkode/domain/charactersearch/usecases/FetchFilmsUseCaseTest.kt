@@ -4,7 +4,7 @@ import com.google.common.truth.Truth.assertThat
 import com.kryptkode.domain.charactersearch.entities.Film
 import com.kryptkode.domain.charactersearch.repo.CharacterDetailRepository
 import com.kryptkode.domain.dispatchers.AppDispatchers
-import com.kryptkode.domain.utils.MockDataFactory.makeFilm
+import com.kryptkode.domain.utils.MockDataFactory.makeDomainFilm
 import com.kryptkode.testshared.DataFactory.randomString
 import io.mockk.every
 import io.mockk.mockk
@@ -52,7 +52,7 @@ class FetchFilmsUseCaseTest {
     @Test
     fun `fetching films returns data`() = runBlocking {
         stubDispatchers()
-        val testCharacters = listOf(makeFilm(), makeFilm())
+        val testCharacters = listOf(makeDomainFilm(), makeDomainFilm())
         stubRepo(testCharacters)
 
         val testQuery = listOf(randomString(), randomString())

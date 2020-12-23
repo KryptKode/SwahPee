@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+    implementation(project(Modules.domain))
     api(Libs.junit_junit)
     api(Libs.mockk)
     api(Libs.truth)

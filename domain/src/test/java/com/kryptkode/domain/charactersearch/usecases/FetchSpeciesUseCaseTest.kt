@@ -4,7 +4,7 @@ import com.google.common.truth.Truth
 import com.kryptkode.domain.charactersearch.entities.Specie
 import com.kryptkode.domain.charactersearch.repo.CharacterDetailRepository
 import com.kryptkode.domain.dispatchers.AppDispatchers
-import com.kryptkode.domain.utils.MockDataFactory.makeSpecie
+import com.kryptkode.domain.utils.MockDataFactory.makeDomainSpecie
 import com.kryptkode.testshared.DataFactory.randomString
 import io.mockk.every
 import io.mockk.mockk
@@ -53,7 +53,7 @@ class FetchSpeciesUseCaseTest {
     @Test
     fun `fetching species returns data`() = runBlocking {
         stubDispatchers()
-        val testCharacters = listOf(makeSpecie(), makeSpecie())
+        val testCharacters = listOf(makeDomainSpecie(), makeDomainSpecie())
         stubRepo(testCharacters)
 
         val testQuery = listOf(randomString(), randomString())
