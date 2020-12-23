@@ -11,6 +11,8 @@ import org.gradle.plugin.use.PluginDependencySpec
  * YOU are responsible for updating manually the dependency version.
  */
 object Versions {
+    const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.4.0" // available: "1.4.2"
+
     const val org_jetbrains_kotlin: String = "1.4.21"
 
     const val com_android_tools_build_gradle: String = "4.1.1"
@@ -31,7 +33,13 @@ object Versions {
 
     const val material: String = "1.2.1"
 
+    const val ktlint: String = "0.38.1" // available: "0.40.0"
+
     const val aapt2: String = "4.1.1-6503028"
+
+    const val mockk: String = "1.10.3-jdk8" // available: "1.10.3"
+
+    const val truth: String = "1.0.1" // available: "1.1"
 
     /**
      * Current version: "6.5"
