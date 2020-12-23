@@ -33,3 +33,11 @@ jobs:
           path: domain/build/reports
       - store_test_results:
           path: domain/build/test-results
+
+      - run:
+          name: Run Data Unit Tests
+          command: ./gradlew :data:test
+      - store_artifacts:
+          path: data/build/reports
+      - store_test_results:
+          path: data/build/test-results
