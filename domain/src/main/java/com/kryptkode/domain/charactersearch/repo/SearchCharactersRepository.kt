@@ -4,5 +4,5 @@ import com.kryptkode.domain.charactersearch.entities.Character
 import kotlinx.coroutines.flow.Flow
 
 interface SearchCharactersRepository {
-    fun searchCharacters(characterName: String): Flow<List<Character>>
+    fun searchCharacters(query: String): Flow<List<Character>>
 }
