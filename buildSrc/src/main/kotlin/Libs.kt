@@ -19,6 +19,42 @@ object Libs {
             Versions.org_jetbrains_kotlinx_kotlinx_coroutines
 
     /**
+     * https://github.com/square/retrofit
+     */
+    const val converter_moshi: String = "com.squareup.retrofit2:converter-moshi:" +
+            Versions.com_squareup_retrofit2
+
+    /**
+     * https://github.com/square/retrofit
+     */
+    const val retrofit: String = "com.squareup.retrofit2:retrofit:" +
+            Versions.com_squareup_retrofit2
+
+    /**
+     * https://square.github.io/okhttp/
+     */
+    const val logging_interceptor: String = "com.squareup.okhttp3:logging-interceptor:" +
+            Versions.com_squareup_okhttp3
+
+    /**
+     * https://square.github.io/okhttp/
+     */
+    const val mockwebserver: String = "com.squareup.okhttp3:mockwebserver:" +
+            Versions.com_squareup_okhttp3
+
+    /**
+     * https://square.github.io/okhttp/
+     */
+    const val okhttp: String = "com.squareup.okhttp3:okhttp:" + Versions.com_squareup_okhttp3
+
+    /**
+     * https://kotlinlang.org/
+     */
+    const val kotlin_annotation_processing_gradle: String =
+            "org.jetbrains.kotlin:kotlin-annotation-processing-gradle:" +
+            Versions.org_jetbrains_kotlin
+
+    /**
      * https://kotlinlang.org/
      */
     const val kotlin_gradle_plugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:" +
@@ -36,6 +72,18 @@ object Libs {
      */
     const val kotlin_stdlib: String = "org.jetbrains.kotlin:kotlin-stdlib:" +
             Versions.org_jetbrains_kotlin
+
+    /**
+     * https://github.com/square/moshi/
+     */
+    const val moshi_kotlin: String = "com.squareup.moshi:moshi-kotlin:" +
+            Versions.com_squareup_moshi
+
+    /**
+     * https://github.com/square/moshi/
+     */
+    const val moshi_kotlin_codegen: String = "com.squareup.moshi:moshi-kotlin-codegen:" +
+            Versions.com_squareup_moshi
 
     /**
      * https://developer.android.com/studio
@@ -63,6 +111,11 @@ object Libs {
      */
     const val espresso_core: String = "androidx.test.espresso:espresso-core:" +
             Versions.espresso_core
+
+    /**
+     * http://code.google.com/p/atinject/
+     */
+    const val javax_inject: String = "javax.inject:javax.inject:" + Versions.javax_inject
 
     /**
      * https://developer.android.com/studio

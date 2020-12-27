@@ -1,3 +1,4 @@
+include ':remote'
 include ':testShared'
 include ':data'
 include ':domain'
