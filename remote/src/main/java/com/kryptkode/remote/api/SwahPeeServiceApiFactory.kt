@@ -11,25 +11,26 @@ object SwahPeeServiceApiFactory {
 
     fun makeSwahPeeService(moshi: Moshi, isDebug: Boolean): SwahPeeServiceApi {
         val okHttpClient = makeOkHttpClient(
-                makeLoggingInterceptor((isDebug)))
+            makeLoggingInterceptor((isDebug))
+        )
         return makeSwahPeeService(okHttpClient, moshi)
     }
 
     private fun makeSwahPeeService(okHttpClient: OkHttpClient, moshi: Moshi): SwahPeeServiceApi {
         val retrofit = Retrofit.Builder()
-                .baseUrl("https://swapi.dev/api/")
-                .client(okHttpClient)
-                .addConverterFactory(MoshiConverterFactory.create(moshi))
-                .build()
+            .baseUrl("https://swapi.dev/api/")
+            .client(okHttpClient)
+            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .build()
         return retrofit.create(SwahPeeServiceApi::class.java)
     }
 
     private fun makeOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
-                .addInterceptor(httpLoggingInterceptor)
-                .connectTimeout(120, TimeUnit.SECONDS)
-                .readTimeout(120, TimeUnit.SECONDS)
-                .build()
+            .addInterceptor(httpLoggingInterceptor)
+            .connectTimeout(90, TimeUnit.SECONDS)
+            .readTimeout(90, TimeUnit.SECONDS)
+            .build()
     }
 
     private fun makeLoggingInterceptor(isDebug: Boolean): HttpLoggingInterceptor {

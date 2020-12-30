@@ -5,6 +5,7 @@ import com.kryptkode.remote.entities.film.FilmRemote
 import com.kryptkode.remote.entities.planet.PlanetRemote
 import com.kryptkode.remote.entities.specie.SpecieRemote
 import com.kryptkode.testshared.DataFactory.randomString
+import java.io.File
 
 object MockDataFactory {
 
@@ -41,5 +42,11 @@ object MockDataFactory {
             randomString(),
             randomString(),
         )
+    }
+
+    fun getJson(path: String): String {
+        val uri = this.javaClass.classLoader?.getResource(path)
+        val file = File(uri?.path ?: "")
+        return String(file.readBytes())
     }
 }
