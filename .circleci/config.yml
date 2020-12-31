@@ -41,3 +41,11 @@ jobs:
           path: data/build/reports
       - store_test_results:
           path: data/build/test-results
+
+      - run:
+          name: Run Remote Unit Tests
+          command: ./gradlew :remote:test
+      - store_artifacts:
+          path: remote/build/reports
+      - store_test_results:
+          path: remote/build/test-results
