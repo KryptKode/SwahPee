@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_hint_text">Enter character name</string>
+    <string name="search_characters_screen_title">Find Star Wars characters</string>
+    <string name="swah_pee_logo_cd">Swah pee logo</string>
+</resources>

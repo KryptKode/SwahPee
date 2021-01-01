@@ -11,13 +11,13 @@ import org.gradle.plugin.use.PluginDependencySpec
  * YOU are responsible for updating manually the dependency version.
  */
 object Versions {
-    const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.4.2" // available: "1.4.2"
-
     const val com_squareup_retrofit2: String = "2.9.0"
 
     const val com_squareup_okhttp3: String = "4.9.0"
 
-    const val org_jetbrains_kotlin: String = "1.4.21"
+    const val org_jetbrains_kotlin: String = "1.4.21" // available: "1.4.21-2"
+
+    const val androidx_lifecycle: String = "2.2.0"
 
     const val com_squareup_moshi: String = "1.11.0"
 
@@ -29,7 +29,17 @@ object Versions {
 
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
+    const val kotlinx_coroutines_android: String = "1.4.2"
+
+    const val kotlinx_coroutines_core: String = "1.4.2" // available: "1.4.2"
+
+    const val kotlinx_coroutines_test: String = "1.4.2"
+
+    const val constraintlayout: String = "2.0.4"
+
     const val espresso_core: String = "3.3.0"
+
+    const val fragment_ktx: String = "1.2.5"
 
     const val javax_inject: String = "1"
 
@@ -45,7 +55,7 @@ object Versions {
 
     const val aapt2: String = "4.1.1-6503028"
 
-    const val mockk: String = "1.10.3-jdk8" // available: "1.10.3"
+    const val mockk: String = "1.10.3-jdk8" // available: "1.10.4"
 
     const val truth: String = "1.0.1" // available: "1.1"
 

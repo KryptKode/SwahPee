@@ -6,19 +6,6 @@
  */
 object Libs {
     /**
-     * https://github.com/Kotlin/kotlinx.coroutines
-     */
-    const val kotlinx_coroutines_android: String =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-android:" +
-            Versions.org_jetbrains_kotlinx_kotlinx_coroutines
-
-    /**
-     * https://github.com/Kotlin/kotlinx.coroutines
-     */
-    const val kotlinx_coroutines_test: String = "org.jetbrains.kotlinx:kotlinx-coroutines-test:" +
-            Versions.org_jetbrains_kotlinx_kotlinx_coroutines
-
-    /**
      * https://github.com/square/retrofit
      */
     const val converter_moshi: String = "com.squareup.retrofit2:converter-moshi:" +
@@ -63,6 +50,18 @@ object Libs {
     /**
      * https://kotlinlang.org/
      */
+    const val kotlin_parcelize_compiler: String =
+            "org.jetbrains.kotlin:kotlin-parcelize-compiler:" + Versions.org_jetbrains_kotlin
+
+    /**
+     * https://kotlinlang.org/
+     */
+    const val kotlin_parcelize_runtime: String = "org.jetbrains.kotlin:kotlin-parcelize-runtime:" +
+            Versions.org_jetbrains_kotlin
+
+    /**
+     * https://kotlinlang.org/
+     */
     const val kotlin_scripting_compiler_embeddable: String =
             "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:" +
             Versions.org_jetbrains_kotlin
@@ -72,6 +71,30 @@ object Libs {
      */
     const val kotlin_stdlib: String = "org.jetbrains.kotlin:kotlin-stdlib:" +
             Versions.org_jetbrains_kotlin
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    const val lifecycle_common_java8: String = "androidx.lifecycle:lifecycle-common-java8:" +
+            Versions.androidx_lifecycle
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    const val lifecycle_extensions: String = "androidx.lifecycle:lifecycle-extensions:" +
+            Versions.androidx_lifecycle
+
+    /**
+     * https://developer.android.com/jetpack/androidx
+     */
+    const val lifecycle_runtime_ktx: String = "androidx.lifecycle:lifecycle-runtime-ktx:" +
+            Versions.androidx_lifecycle
+
+    /**
+     * https://developer.android.com/jetpack/androidx
+     */
+    const val lifecycle_viewmodel_ktx: String = "androidx.lifecycle:lifecycle-viewmodel-ktx:" +
+            Versions.androidx_lifecycle
 
     /**
      * https://github.com/square/moshi/
@@ -107,10 +130,40 @@ object Libs {
             Versions.de_fayard_buildsrcversions_gradle_plugin
 
     /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
+    const val kotlinx_coroutines_android: String =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:" +
+            Versions.kotlinx_coroutines_android
+
+    /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
+    const val kotlinx_coroutines_core: String = "org.jetbrains.kotlinx:kotlinx-coroutines-core:" +
+            Versions.kotlinx_coroutines_core
+
+    /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
+    const val kotlinx_coroutines_test: String = "org.jetbrains.kotlinx:kotlinx-coroutines-test:" +
+            Versions.kotlinx_coroutines_test
+
+    /**
+     * http://tools.android.com
+     */
+    const val constraintlayout: String = "androidx.constraintlayout:constraintlayout:" +
+            Versions.constraintlayout
+
+    /**
      * https://developer.android.com/testing
      */
     const val espresso_core: String = "androidx.test.espresso:espresso-core:" +
             Versions.espresso_core
+
+    /**
+     * https://developer.android.com/jetpack/androidx
+     */
+    const val fragment_ktx: String = "androidx.fragment:fragment-ktx:" + Versions.fragment_ktx
 
     /**
      * http://code.google.com/p/atinject/
