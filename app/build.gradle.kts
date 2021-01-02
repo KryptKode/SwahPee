@@ -47,10 +47,13 @@ dependencies {
     implementation(Libs.navigation_fragment_ktx)
     implementation(Libs.navigation_ui_ktx)
 
+
+    implementation(Libs.hilt_android)
+    kapt(Libs.hilt_android_compiler)
+    implementation(Libs.hilt_lifecycle_viewmodel)
+    kapt(Libs.hilt_compiler)
+
     testImplementation(Libs.junit_junit)
     androidTestImplementation(Libs.androidx_test_ext_junit)
     androidTestImplementation(Libs.espresso_core)
-
-    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02")
-    kapt ("androidx.hilt:hilt-compiler:1.0.0-alpha02")
 }

@@ -1,4 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript {
     repositories {
         google()
@@ -21,6 +22,16 @@ allprojects {
     repositories {
         google()
         jcenter()
+    }
+
+    tasks.withType<KotlinCompile>().configureEach {
+        kotlinOptions.freeCompilerArgs +=
+            "-Xuse-experimental=" +
+                    "kotlin.Experimental," +
+                    "kotlinx.coroutines.ExperimentalCoroutinesApi," +
+                    "kotlinx.coroutines.InternalCoroutinesApi," +
+                    "kotlinx.coroutines.ObsoleteCoroutinesApi," +
+                    "kotlinx.coroutines.FlowPreview"
     }
 }
 

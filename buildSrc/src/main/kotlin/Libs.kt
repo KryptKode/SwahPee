@@ -164,6 +164,9 @@ public object Libs {
     public const val kotlin_parcelize_runtime: String =
             "org.jetbrains.kotlin:kotlin-parcelize-runtime:" + Versions.kotlin_parcelize_runtime
 
+    public const val hilt_android_compiler: String = "com.google.dagger:hilt-android-compiler:" +
+            Versions.hilt_android_compiler
+
     /**
      * https://kotlinlang.org/
      */
@@ -193,6 +196,9 @@ public object Libs {
      */
     public const val fragment_ktx: String = "androidx.fragment:fragment-ktx:" +
             Versions.fragment_ktx
+
+    public const val hilt_android: String = "com.google.dagger:hilt-android:" +
+            Versions.hilt_android
 
     /**
      * http://code.google.com/p/atinject/
