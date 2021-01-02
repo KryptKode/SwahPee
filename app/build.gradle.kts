@@ -50,4 +50,7 @@ dependencies {
     testImplementation(Libs.junit_junit)
     androidTestImplementation(Libs.androidx_test_ext_junit)
     androidTestImplementation(Libs.espresso_core)
+
+    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02")
+    kapt ("androidx.hilt:hilt-compiler:1.0.0-alpha02")
 }

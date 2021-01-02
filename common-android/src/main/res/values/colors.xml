@@ -23,4 +23,7 @@
     <color name="colorOverlay">#339C9B9B</color>
 
     <color name="colorTransparent">#0000</color>
+    <color name="colorGray">#5a5b5e</color>
+    <color name="colorGrayLight">#777777</color>
+    <color name="colorGrayDark">#202020</color>
 </resources>

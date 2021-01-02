@@ -9,7 +9,7 @@ object GradlePluginId {
 
 object GradlePlugin {
     const val DAGGER_HILT_ANDROID_GRADLE_PLUGIN =
-        "com.google.dagger:hilt-android-gradle-plugin:${Versions.com_google_dagger}"
+        "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt_android_gradle_plugin}"
     const val NAVIGATION_SAFE_ARGS_GRADLE_PLUGIN =
         "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.androidx_navigation}"
 }

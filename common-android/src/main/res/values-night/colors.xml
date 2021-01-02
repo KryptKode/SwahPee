@@ -23,4 +23,8 @@
     <color name="colorOverlay">#339C9B9B</color>
 
     <color name="colorTransparent">#0000</color>
+
+    <color name="colorGray">#6C6E75</color>
+    <color name="colorGrayLight">#ACAAAA</color>
+    <color name="colorGrayDark">#3C3C3C</color>
 </resources>

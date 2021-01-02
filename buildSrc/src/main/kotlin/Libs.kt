@@ -56,48 +56,16 @@ public object Libs {
     public const val okhttp: String = "com.squareup.okhttp3:okhttp:" + Versions.com_squareup_okhttp3
 
     /**
-     * https://kotlinlang.org/
-     */
-    public const val kotlin_annotation_processing_gradle: String =
-            "org.jetbrains.kotlin:kotlin-annotation-processing-gradle:" +
-            Versions.org_jetbrains_kotlin
-
-    /**
-     * https://kotlinlang.org/
-     */
-    public const val kotlin_gradle_plugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:" +
-            Versions.org_jetbrains_kotlin
-
-    /**
-     * https://kotlinlang.org/
-     */
-    public const val kotlin_parcelize_compiler: String =
-            "org.jetbrains.kotlin:kotlin-parcelize-compiler:" + Versions.org_jetbrains_kotlin
-
-    /**
-     * https://kotlinlang.org/
-     */
-    public const val kotlin_parcelize_runtime: String =
-            "org.jetbrains.kotlin:kotlin-parcelize-runtime:" + Versions.org_jetbrains_kotlin
-
-    /**
-     * https://kotlinlang.org/
-     */
-    public const val kotlin_scripting_compiler_embeddable: String =
-            "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:" +
-            Versions.org_jetbrains_kotlin
-
-    /**
-     * https://kotlinlang.org/
-     */
-    public const val kotlin_stdlib: String = "org.jetbrains.kotlin:kotlin-stdlib:" +
-            Versions.org_jetbrains_kotlin
-
-    /**
      * https://developer.android.com/topic/libraries/architecture/index.html
      */
     public const val navigation_fragment_ktx: String =
             "androidx.navigation:navigation-fragment-ktx:" + Versions.androidx_navigation
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    public const val navigation_safe_args_gradle_plugin: String =
+            "androidx.navigation:navigation-safe-args-gradle-plugin:" + Versions.androidx_navigation
 
     /**
      * https://developer.android.com/topic/libraries/architecture/index.html
@@ -141,11 +109,10 @@ public object Libs {
     public const val moshi_kotlin_codegen: String = "com.squareup.moshi:moshi-kotlin-codegen:" +
             Versions.com_squareup_moshi
 
-    public const val hilt_android: String = "com.google.dagger:hilt-android:" +
-            Versions.com_google_dagger
+    public const val hilt_compiler: String = "androidx.hilt:hilt-compiler:" + Versions.androidx_hilt
 
-    public const val hilt_android_compiler: String = "com.google.dagger:hilt-android-compiler:" +
-            Versions.com_google_dagger
+    public const val hilt_lifecycle_viewmodel: String = "androidx.hilt:hilt-lifecycle-viewmodel:" +
+            Versions.androidx_hilt
 
     /**
      * https://developer.android.com/studio
@@ -169,6 +136,41 @@ public object Libs {
             Versions.de_fayard_buildsrcversions_gradle_plugin
 
     /**
+     * https://kotlinlang.org/
+     */
+    public const val kotlin_scripting_compiler_embeddable: String =
+            "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:" +
+            Versions.kotlin_scripting_compiler_embeddable
+
+    /**
+     * https://kotlinlang.org/
+     */
+    public const val kotlin_annotation_processing_gradle: String =
+            "org.jetbrains.kotlin:kotlin-annotation-processing-gradle:" +
+            Versions.kotlin_annotation_processing_gradle
+
+    public const val hilt_android_gradle_plugin: String =
+            "com.google.dagger:hilt-android-gradle-plugin:" + Versions.hilt_android_gradle_plugin
+
+    /**
+     * https://kotlinlang.org/
+     */
+    public const val kotlin_parcelize_compiler: String =
+            "org.jetbrains.kotlin:kotlin-parcelize-compiler:" + Versions.kotlin_parcelize_compiler
+
+    /**
+     * https://kotlinlang.org/
+     */
+    public const val kotlin_parcelize_runtime: String =
+            "org.jetbrains.kotlin:kotlin-parcelize-runtime:" + Versions.kotlin_parcelize_runtime
+
+    /**
+     * https://kotlinlang.org/
+     */
+    public const val kotlin_gradle_plugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:" +
+            Versions.kotlin_gradle_plugin
+
+    /**
      * http://tools.android.com
      */
     public const val constraintlayout: String = "androidx.constraintlayout:constraintlayout:" +
@@ -179,6 +181,12 @@ public object Libs {
      */
     public const val espresso_core: String = "androidx.test.espresso:espresso-core:" +
             Versions.espresso_core
+
+    /**
+     * https://kotlinlang.org/
+     */
+    public const val kotlin_stdlib: String = "org.jetbrains.kotlin:kotlin-stdlib:" +
+            Versions.kotlin_stdlib
 
     /**
      * https://developer.android.com/jetpack/androidx
