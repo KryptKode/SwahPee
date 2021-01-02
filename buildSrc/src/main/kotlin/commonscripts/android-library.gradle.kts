@@ -1,9 +1,10 @@
 package commonscripts
 
+
 plugins {
-    id("com.android.library") apply false
-    id("kotlin-android") apply false
-    id("kotlin-parcelize") apply false
+    `android-library` apply false
+    `kotlin-android` apply false
+    `kotlin-parcelize` apply false
 }
 
 android {

@@ -9,7 +9,7 @@
     <color name="colorSecondaryDark">#966342</color>
     <color name="colorCard">@color/cardview_light_background</color>
 
-    <color name="colorAccent">#FFC107</color>
+    <color name="colorAccent">#ed524f</color>
     <color name="colorOnAccent">#FFFFFF</color>
 
     <color name="textPrimary">#212121</color>

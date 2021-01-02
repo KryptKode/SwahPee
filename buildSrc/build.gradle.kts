@@ -14,6 +14,8 @@ object Dependencies {
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21"
     const val detektGradlePlugin = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.15.0"
     const val klintGradlePlugin = "org.jlleitschuh.gradle:ktlint-gradle:9.4.1"
+    const val navigationSafeArgs: String = "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.2"
+    const val daggerHilt: String = "com.google.dagger:hilt-android-gradle-plugin:2.28.3-alpha"
 }
 
 dependencies {
@@ -21,4 +23,6 @@ dependencies {
     implementation(Dependencies.kotlinGradlePlugin)
     implementation(Dependencies.detektGradlePlugin)
     implementation(Dependencies.klintGradlePlugin)
+    implementation(Dependencies.navigationSafeArgs)
+    implementation(Dependencies.daggerHilt)
 }

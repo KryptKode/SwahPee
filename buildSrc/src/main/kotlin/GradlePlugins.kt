@@ -1,0 +1,15 @@
+object GradlePluginId {
+    internal const val ANDROID_APPLICATION = "com.android.application"
+    internal const val ANDROID_LIBRARY = "com.android.library"
+    internal const val KOTLIN_ANDROID = "kotlin-android"
+    internal const val KOTLIN_PARCELIZE = "kotlin-parcelize"
+    internal const val KOTLIN_KAPT = "kotlin-kapt"
+    internal const val KOTLIN = "kotlin"
+}
+
+object GradlePlugin {
+    const val DAGGER_HILT_ANDROID_GRADLE_PLUGIN =
+        "com.google.dagger:hilt-android-gradle-plugin:${Versions.com_google_dagger}"
+    const val NAVIGATION_SAFE_ARGS_GRADLE_PLUGIN =
+        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.androidx_navigation}"
+}

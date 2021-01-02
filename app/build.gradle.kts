@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 android {
@@ -34,11 +35,18 @@ android {
 dependencies {
 
     implementation(project(Modules.commonAndroid))
+    implementation(project(Modules.characterSearch))
 
     implementation(Libs.kotlin_stdlib)
     implementation(Libs.core_ktx)
     implementation(Libs.appcompat)
+
+    implementation(Libs.constraintlayout)
     implementation(Libs.material)
+
+    implementation(Libs.navigation_fragment_ktx)
+    implementation(Libs.navigation_ui_ktx)
+
     testImplementation(Libs.junit_junit)
     androidTestImplementation(Libs.androidx_test_ext_junit)
     androidTestImplementation(Libs.espresso_core)
