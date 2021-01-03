@@ -5,8 +5,8 @@
     <color name="colorPrimaryLight">#C8E6C9</color>
     <color name="colorOnPrimary">#FFFFFF</color>
 
-    <color name="colorSecondary">#ad7d4d</color>
-    <color name="colorSecondaryDark">#966342</color>
+    <color name="colorSecondary">#72b3e7</color>
+    <color name="colorSecondaryDark">#446885</color>
     <color name="colorCard">@color/cardview_light_background</color>
 
     <color name="colorAccent">#ed524f</color>

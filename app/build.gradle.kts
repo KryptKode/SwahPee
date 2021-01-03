@@ -4,6 +4,7 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     daggerHilt
+    navigationSafeArgs
 }
 
 android {

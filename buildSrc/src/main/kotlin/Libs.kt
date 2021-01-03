@@ -186,6 +186,12 @@ public object Libs {
             Versions.constraintlayout
 
     /**
+     * https://github.com/hdodenhof/CircleImageView
+     */
+    public const val circleimageview: String = "de.hdodenhof:circleimageview:" +
+            Versions.circleimageview
+
+    /**
      * https://developer.android.com/testing
      */
     public const val espresso_core: String = "androidx.test.espresso:espresso-core:" +

@@ -49,6 +49,8 @@ public object Versions {
 
     public const val constraintlayout: String = "2.0.4"
 
+    public const val circleimageview: String = "3.1.0"
+
     public const val espresso_core: String = "3.3.0"
 
     public const val kotlin_stdlib: String = "1.4.21-2"
