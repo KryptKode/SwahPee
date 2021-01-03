@@ -3,7 +3,6 @@ package com.kryptkode.commonandroid.customviews
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
-
 import androidx.recyclerview.widget.RecyclerView
 
 class EmptyRecyclerView : RecyclerView {
@@ -47,7 +46,6 @@ class EmptyRecyclerView : RecyclerView {
         oldAdapter?.unregisterAdapterDataObserver(observer)
         super.setAdapter(adapter)
         adapter?.registerAdapterDataObserver(observer)
-
         checkIfEmpty()
     }
 

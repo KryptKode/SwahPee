@@ -1,5 +1,6 @@
+include ':core'
 include ':common-android'
-include ':ui:character-search'
+include ':feature:charactersearch'
 include ':remote'
 include ':testShared'
 include ':data'

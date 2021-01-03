@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-parcelize")
     id("kotlin-kapt")
+    daggerHilt
 }
 
 android {
@@ -36,10 +37,16 @@ dependencies {
 
     implementation(project(Modules.commonAndroid))
     implementation(project(Modules.characterSearch))
+    implementation(project(Modules.core))
+    implementation(project(Modules.domain))
+    implementation(project(Modules.data))
+    implementation(project(Modules.remote))
 
     implementation(Libs.kotlin_stdlib)
     implementation(Libs.core_ktx)
     implementation(Libs.appcompat)
+
+    implementation(Libs.moshi_kotlin)
 
     implementation(Libs.constraintlayout)
     implementation(Libs.material)

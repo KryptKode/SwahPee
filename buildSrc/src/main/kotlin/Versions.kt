@@ -33,25 +33,27 @@ public object Versions {
 
     public const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
-    public const val kotlin_scripting_compiler_embeddable: String = "1.4.21-2" // available:
+    public const val kotlin_scripting_compiler_embeddable: String = "1.4.21" // available: "1.4.21-2"
 
-    public const val kotlin_annotation_processing_gradle: String = "1.4.21-2" // available: "1.4.21-2"
+    public const val kotlin_annotation_processing_gradle: String = "1.4.21" // available: "1.4.21-2"
 
     public const val hilt_android_gradle_plugin: String = "2.28.3-alpha"
 
-    public const val kotlin_parcelize_compiler: String = "1.4.21-2" // available: "1.4.21-2"
+    public const val kotlin_parcelize_compiler: String = "1.4.21" // available: "1.4.21-2"
 
-    public const val kotlin_parcelize_runtime: String = "1.4.21-2" // available: "1.4.21-2"
+    public const val kotlin_parcelize_runtime: String = "1.4.21" // available: "1.4.21-2"
 
     public const val hilt_android_compiler: String = "2.30.1-alpha"
 
-    public const val kotlin_gradle_plugin: String = "1.4.21-2" // available: "1.4.21-2"
+    public const val kotlin_gradle_plugin: String = "1.4.21" // available: "1.4.21-2"
 
     public const val constraintlayout: String = "2.0.4"
 
     public const val espresso_core: String = "3.3.0"
 
     public const val kotlin_stdlib: String = "1.4.21-2"
+
+    public const val core_testing: String = "1.1.1"
 
     public const val fragment_ktx: String = "1.2.5"
 
@@ -69,7 +71,9 @@ public object Versions {
 
     public const val material: String = "1.2.1"
 
-    public const val ktlint: String = "0.40.0" // available: "0.40.0"
+    public const val ktlint: String = "0.38.1" // available: "0.40.0"
+
+    public const val timber: String = "4.7.1"
 
     public const val aapt2: String = "4.1.1-6503028"
 

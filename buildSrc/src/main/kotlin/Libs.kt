@@ -88,6 +88,12 @@ public object Libs {
     /**
      * https://developer.android.com/jetpack/androidx
      */
+    public const val lifecycle_livedata_ktx: String = "androidx.lifecycle:lifecycle-livedata-ktx:" +
+            Versions.androidx_lifecycle
+
+    /**
+     * https://developer.android.com/jetpack/androidx
+     */
     public const val lifecycle_runtime_ktx: String = "androidx.lifecycle:lifecycle-runtime-ktx:" +
             Versions.androidx_lifecycle
 
@@ -192,6 +198,12 @@ public object Libs {
             Versions.kotlin_stdlib
 
     /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    public const val core_testing: String = "android.arch.core:core-testing:" +
+            Versions.core_testing
+
+    /**
      * https://developer.android.com/jetpack/androidx
      */
     public const val fragment_ktx: String = "androidx.fragment:fragment-ktx:" +
@@ -233,6 +245,11 @@ public object Libs {
      * https://github.com/pinterest/ktlint
      */
     public const val ktlint: String = "com.pinterest:ktlint:" + Versions.ktlint
+
+    /**
+     * https://github.com/JakeWharton/timber
+     */
+    public const val timber: String = "com.jakewharton.timber:timber:" + Versions.timber
 
     /**
      * https://developer.android.com/studio

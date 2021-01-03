@@ -1,6 +1,6 @@
 plugins {
     id(ScriptsPlugins.kotlinLibrary)
-    kotlin("kapt")
+    kotlinKapt
 }
 
 dependencies {
@@ -11,11 +11,10 @@ dependencies {
     implementation(Libs.okhttp)
     implementation(Libs.logging_interceptor)
 
-    implementation(Libs.moshi_kotlin)
-    kapt(Libs.moshi_kotlin_codegen)
-
     implementation(Libs.retrofit)
     implementation(Libs.converter_moshi)
+    implementation(Libs.moshi_kotlin)
+    kapt(Libs.moshi_kotlin_codegen)
 
     testImplementation(project(Modules.testShared))
     testImplementation(Libs.mockwebserver)

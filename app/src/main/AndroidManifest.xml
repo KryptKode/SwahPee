@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.kryptkode.swahpee">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:name=".SwahPeeApp"
@@ -11,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="RtlEnabled">
+        tools:ignore="AllowBackup,RtlEnabled">
 
         <activity android:name=".SplashActivity"
             android:theme="@style/AppTheme.Splash">

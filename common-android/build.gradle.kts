@@ -1,5 +1,6 @@
 plugins {
-    id(ScriptsPlugins.androidLibrary)
+    androidLibrary
+    kotlinKapt
 }
 
 dependencies {
@@ -7,8 +8,7 @@ dependencies {
     implementation(Libs.kotlinx_coroutines_android)
     implementation (Libs.kotlinx_coroutines_core)
 
-    implementation(Libs.javax_inject)
-
+    implementation (Libs.timber)
     implementation (Libs.core_ktx)
     implementation (Libs.appcompat)
 

@@ -3,6 +3,7 @@ object Modules {
     const val data = ":data"
     const val remote = ":remote"
     const val testShared = ":testShared"
-    const val characterSearch = ":ui:character-search"
+    const val characterSearch = ":feature:charactersearch"
     const val commonAndroid = ":common-android"
+    const val core = ":core"
 }
