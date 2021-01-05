@@ -49,3 +49,19 @@ jobs:
           path: remote/build/reports
       - store_test_results:
           path: remote/build/test-results
+
+      - run:
+          name: Run Cache Unit Tests
+          command: ./gradlew :cache:test
+      - store_artifacts:
+          path: cache/build/reports
+      - store_test_results:
+          path: cache/build/test-results
+
+      - run:
+          name: Run Characters Feature Unit Tests
+          command: ./gradlew :feature:characters:test
+      - store_artifacts:
+          path: feature/characters/build/reports
+      - store_test_results:
+          path: feature/characters/build/test-results
