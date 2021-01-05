@@ -9,16 +9,15 @@ import androidx.lifecycle.asLiveData
 import com.kryptkode.characters.mapper.CharacterUiMapper
 import com.kryptkode.commonandroid.livedata.event.Event
 import com.kryptkode.commonandroid.livedata.extension.asLiveData
-import com.kryptkode.commonandroid.logger.Logger
 import com.kryptkode.domain.charactersearch.usecases.SearchCharactersUseCase
 import com.kryptkode.domain.dispatchers.AppDispatchers
 import kotlinx.coroutines.flow.*
+import timber.log.Timber
 
 class SearchCharactersViewModel @ViewModelInject constructor(
     private val searchCharactersUseCase: SearchCharactersUseCase,
     private val mapper: CharacterUiMapper,
     dispatchers: AppDispatchers,
-    private val logger: Logger,
 ) : ViewModel() {
 
     private val mutableShowLoading = MutableLiveData<Event<Unit>>()
@@ -37,13 +36,13 @@ class SearchCharactersViewModel @ViewModelInject constructor(
             .filter { it.trim().isNotEmpty() }
             .distinctUntilChanged()
             .onEach {
-                logger.w("Starting search flow: ${Thread.currentThread().name}")
+                Timber.w("Starting search flow: ${Thread.currentThread().name}")
                 showLoading()
             }
             .flatMapLatest { searchCharactersUseCase.searchCharacters(it) }
             .map { it.map { item -> mapper.mapToEntity(item) } }
             .onEach {
-                logger.w("Search flow completed ${Thread.currentThread().name}")
+                Timber.w("Search flow completed ${Thread.currentThread().name}")
                 hideLoading()
                 if (it.isEmpty()) {
                     showError("No characters found for your query ${Thread.currentThread().name}")
@@ -51,14 +50,14 @@ class SearchCharactersViewModel @ViewModelInject constructor(
             }
             .flowOn(dispatchers.io)
             .catch {
-                logger.e("Error occurred while finding characters: $it")
+                Timber.e("Error occurred while finding characters: $it")
                 showError(it.localizedMessage ?: "An error  occurred")
             }
             .asLiveData()
 
 
     fun searchCharacters(query: String) {
-        logger.d("Finding characters: $query")
+        Timber.d("Finding characters: $query")
         searchQuery.value = query
     }
 

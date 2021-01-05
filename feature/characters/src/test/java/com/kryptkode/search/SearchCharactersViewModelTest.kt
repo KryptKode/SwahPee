@@ -2,8 +2,15 @@ package com.kryptkode.search
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.google.common.truth.Truth.assertThat
+import com.kryptkode.characters.mapper.CharacterUiMapper
 import com.kryptkode.characters.search.SearchCharactersViewModel
+import com.kryptkode.domain.charactersearch.usecases.SearchCharactersUseCase
+import com.kryptkode.domain.dispatchers.AppDispatchers
 import com.kryptkode.testshared.MainCoroutineRule
+import io.mockk.every
+import io.mockk.mockk
+import io.mockk.unmockkAll
+import kotlinx.coroutines.test.TestCoroutineDispatcher
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -17,16 +24,30 @@ class SearchCharactersViewModelTest {
     @get:Rule
     var coroutineRule = MainCoroutineRule()
 
+    private lateinit var searchCharactersUseCase: SearchCharactersUseCase
+    private lateinit var characterUiMapper: CharacterUiMapper
+    private lateinit var dispatchers: AppDispatchers
     private lateinit var sut: SearchCharactersViewModel
 
 
     @Before
     fun setUp() {
+        searchCharactersUseCase = mockk()
+        characterUiMapper = mockk()
+        dispatchers = mockk()
+
+        stubDispatchers()
+
+        sut = SearchCharactersViewModel(
+            searchCharactersUseCase,
+            characterUiMapper,
+            dispatchers,
+        )
 
     }
 
     @Test
-    fun `showLoading posts loading event`(){
+    fun `showLoading posts loading event`() {
 
         assertThat(sut.showLoading.value).isNull()
 
@@ -37,7 +58,7 @@ class SearchCharactersViewModelTest {
 
 
     @Test
-    fun `hideLoading posts loading event`(){
+    fun `hideLoading posts loading event`() {
 
         assertThat(sut.hideLoading.value).isNull()
 
@@ -47,7 +68,7 @@ class SearchCharactersViewModelTest {
     }
 
     @Test
-    fun `showError posts error event`(){
+    fun `showError posts error event`() {
 
         assertThat(sut.showError.value).isNull()
 
@@ -60,7 +81,7 @@ class SearchCharactersViewModelTest {
 
 
     @Test
-    fun `searchCharacters posts query event`(){
+    fun `searchCharacters posts query event`() {
 
         assertThat(sut.searchQuery.value).isNull()
 
@@ -72,16 +93,29 @@ class SearchCharactersViewModelTest {
     }
 
     @Test
-    fun `searchCharacters posts results`(){
+    fun `searchCharacters posts results`() {
         val testQuery = "dar"
         sut.searchCharacters(testQuery)
 
     }
 
 
-
-
     @After
     fun tearDown() {
+        unmockkAll()
+    }
+
+    private fun stubDispatchers() {
+        every {
+            dispatchers.default
+        } returns TestCoroutineDispatcher()
+
+        every {
+            dispatchers.io
+        } returns TestCoroutineDispatcher()
+
+        every {
+            dispatchers.main
+        } returns TestCoroutineDispatcher()
     }
 }
