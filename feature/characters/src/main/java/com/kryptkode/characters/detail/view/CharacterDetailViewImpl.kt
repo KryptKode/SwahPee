@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
-import com.kryptkode.characters.CharacterUi
 import com.kryptkode.characters.detail.view.filmlist.FilmListAdapter
+import com.kryptkode.characters.entities.CharacterUi
 import com.kryptkode.search.R
 import com.kryptkode.search.databinding.LayoutCharacterDetailBinding
 

@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asFlow
 import androidx.lifecycle.asLiveData
-import com.kryptkode.characters.mapper.CharacterUiDomainMapper
+import com.kryptkode.characters.mapper.CharacterUiMapper
 import com.kryptkode.commonandroid.livedata.event.Event
 import com.kryptkode.commonandroid.livedata.extension.asLiveData
 import com.kryptkode.commonandroid.logger.Logger
@@ -16,7 +16,7 @@ import kotlinx.coroutines.flow.*
 
 class SearchCharactersViewModel @ViewModelInject constructor(
     private val searchCharactersUseCase: SearchCharactersUseCase,
-    private val mapper: CharacterUiDomainMapper,
+    private val mapper: CharacterUiMapper,
     dispatchers: AppDispatchers,
     private val logger: Logger,
 ) : ViewModel() {

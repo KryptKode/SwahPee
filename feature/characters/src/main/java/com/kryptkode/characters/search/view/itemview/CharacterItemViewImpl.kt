@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.kryptkode.characters.CharacterUi
+import com.kryptkode.characters.entities.CharacterUi
 import com.kryptkode.search.R
 import com.kryptkode.search.databinding.ItemCharacterBinding
 

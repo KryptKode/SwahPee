@@ -1,9 +1,11 @@
 package com.kryptkode.data.charactersearch
 
 import com.google.common.truth.Truth.assertThat
+import com.kryptkode.data.charactersearch.cache.CharacterCache
 import com.kryptkode.data.charactersearch.entities.FilmEntity
 import com.kryptkode.data.charactersearch.entities.PlanetEntity
 import com.kryptkode.data.charactersearch.entities.SpecieEntity
+import com.kryptkode.data.charactersearch.mapper.CharacterInfoMapper
 import com.kryptkode.data.charactersearch.mapper.FilmMapper
 import com.kryptkode.data.charactersearch.mapper.PlanetMapper
 import com.kryptkode.data.charactersearch.mapper.SpecieMapper
@@ -28,7 +30,9 @@ class CharacterDetailRepositoryImplTest {
     private lateinit var filmMapper: FilmMapper
     private lateinit var planetMapper: PlanetMapper
     private lateinit var specieMapper: SpecieMapper
+    private lateinit var characterInfoMapper: CharacterInfoMapper
     private lateinit var remote: CharacterDetailRemote
+    private lateinit var local: CharacterCache
 
 
     @Before
@@ -37,7 +41,9 @@ class CharacterDetailRepositoryImplTest {
         planetMapper = mockk()
         specieMapper = mockk()
         remote = mockk()
-        sut = CharacterDetailRepositoryImpl(remote, filmMapper, planetMapper, specieMapper)
+        local = mockk()
+        characterInfoMapper = mockk()
+        sut = CharacterDetailRepositoryImpl(remote, filmMapper, planetMapper, specieMapper, local, characterInfoMapper)
     }
 
     @After
@@ -166,6 +172,7 @@ class CharacterDetailRepositoryImplTest {
 
     @Test
     fun `fetchSpecies calls mapper`() = runBlocking {
+        //Arrange
         val filmsList = listOf(makeSpecie(), makeSpecie()).apply {
             stubFetchSpecieRemote(this)
             forEach {
@@ -173,9 +180,11 @@ class CharacterDetailRepositoryImplTest {
             }
         }
 
+        //Act
         val testQuery = listOf(randomString())
         sut.fetchSpecies(testQuery).single()
 
+        //Assert
         coVerifyAll {
             filmsList.forEach {
                 specieMapper.mapFromEntity(it)

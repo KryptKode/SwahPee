@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.kryptkode.characters.CharacterUi
+import com.kryptkode.characters.entities.CharacterUi
 import com.kryptkode.characters.search.view.SearchCharacterViewFactory
 import com.kryptkode.characters.search.view.itemview.CharacterItemView
 

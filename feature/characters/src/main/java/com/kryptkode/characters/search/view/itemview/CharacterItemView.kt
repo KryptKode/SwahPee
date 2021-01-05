@@ -1,6 +1,6 @@
 package com.kryptkode.characters.search.view.itemview
 
-import com.kryptkode.characters.CharacterUi
+import com.kryptkode.characters.entities.CharacterUi
 import com.kryptkode.commonandroid.view.BaseObservableAppView
 
 abstract class CharacterItemView: BaseObservableAppView<CharacterItemView.Listener>() {

@@ -120,6 +120,34 @@ public object Libs {
     public const val hilt_lifecycle_viewmodel: String = "androidx.hilt:hilt-lifecycle-viewmodel:" +
             Versions.androidx_hilt
 
+    public const val hilt_work: String = "androidx.hilt:hilt-work:" + Versions.androidx_hilt
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    public const val room_compiler: String = "androidx.room:room-compiler:" + Versions.androidx_room
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    public const val room_ktx: String = "androidx.room:room-ktx:" + Versions.androidx_room
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    public const val room_runtime: String = "androidx.room:room-runtime:" + Versions.androidx_room
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    public const val work_runtime_ktx: String = "androidx.work:work-runtime-ktx:" +
+            Versions.androidx_work
+
+    /**
+     * https://developer.android.com/topic/libraries/architecture/index.html
+     */
+    public const val work_testing: String = "androidx.work:work-testing:" + Versions.androidx_work
+
     /**
      * https://developer.android.com/studio
      */
@@ -180,6 +208,12 @@ public object Libs {
             Versions.kotlin_gradle_plugin
 
     /**
+     * https://github.com/romandanylyk/PageIndicatorView
+     */
+    public const val pageindicatorview: String = "com.romandanylyk:pageindicatorview:" +
+            Versions.pageindicatorview
+
+    /**
      * http://tools.android.com
      */
     public const val constraintlayout: String = "androidx.constraintlayout:constraintlayout:" +
@@ -231,6 +265,11 @@ public object Libs {
 
     public const val viewbinding: String = "androidx.databinding:viewbinding:" +
             Versions.viewbinding
+
+    /**
+     * https://developer.android.com/jetpack/androidx
+     */
+    public const val viewpager2: String = "androidx.viewpager2:viewpager2:" + Versions.viewpager2
 
     /**
      * https://developer.android.com/jetpack/androidx

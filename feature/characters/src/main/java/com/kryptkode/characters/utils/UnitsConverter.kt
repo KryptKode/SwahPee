@@ -2,8 +2,9 @@ package com.kryptkode.characters.utils
 
 import java.math.BigDecimal
 import java.math.RoundingMode
+import javax.inject.Inject
 
-object UnitsConverter {
+class UnitsConverter @Inject constructor() {
 
     fun convertCmToInches(centimeters: String): String =
         (BigDecimal(centimeters.toDouble() * 0.393701).setScale(

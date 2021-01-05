@@ -1,6 +1,6 @@
 package com.kryptkode.characters.detail.view
 
-import com.kryptkode.characters.CharacterUi
+import com.kryptkode.characters.entities.CharacterUi
 import com.kryptkode.commonandroid.view.BaseObservableAppView
 
 abstract class CharacterDetailView : BaseObservableAppView<CharacterDetailView.Listener>(){
@@ -9,6 +9,6 @@ abstract class CharacterDetailView : BaseObservableAppView<CharacterDetailView.L
         fun onBackClick()
     }
 
-    abstract fun bindCharacter(character:CharacterUi)
+    abstract fun bindCharacter(character: CharacterUi)
     
 }

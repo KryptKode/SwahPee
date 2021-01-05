@@ -75,6 +75,12 @@ class FetchPlanetUseCaseTest {
 
         val testUrl = randomString()
         SUT.fetchPlanet(testUrl)
+
+        //check that these were not called
+        verify(inverse = true) {
+            dispatchers.default
+            dispatchers.main
+        }
         verify(exactly = 1) {
             dispatchers.io
         }

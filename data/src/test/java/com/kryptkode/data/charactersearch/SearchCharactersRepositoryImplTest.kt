@@ -1,11 +1,11 @@
 package com.kryptkode.data.charactersearch
 
 import com.google.common.truth.Truth.assertThat
-import com.kryptkode.data.charactersearch.entities.CharacterEntity
-import com.kryptkode.data.charactersearch.mapper.CharacterMapper
+import com.kryptkode.data.charactersearch.entities.CharacterInfoEntity
+import com.kryptkode.data.charactersearch.mapper.CharacterInfoMapper
 import com.kryptkode.data.charactersearch.remote.SearchCharactersRemote
-import com.kryptkode.data.utils.MockDataFactory.makeCharacterEntity
-import com.kryptkode.domain.charactersearch.entities.Character
+import com.kryptkode.data.utils.MockDataFactory.makeCharacterInfoEntity
+import com.kryptkode.domain.charactersearch.entities.CharacterInfo
 import com.kryptkode.testshared.DataFactory.randomString
 import io.mockk.*
 import kotlinx.coroutines.flow.single
@@ -17,7 +17,7 @@ import org.junit.Test
 
 class SearchCharactersRepositoryImplTest {
     private lateinit var sut: SearchCharactersRepositoryImpl
-    private lateinit var mapper: CharacterMapper
+    private lateinit var mapper: CharacterInfoMapper
     private lateinit var remote: SearchCharactersRemote
 
     @Before
@@ -34,10 +34,10 @@ class SearchCharactersRepositoryImplTest {
 
     @Test
     fun `searchCharacters calls remote with correct params`() = runBlocking {
-        listOf(makeCharacterEntity(), makeCharacterEntity()).apply {
+        listOf(makeCharacterInfoEntity(), makeCharacterInfoEntity()).apply {
             stubRemote(this)
             forEach {
-                stubMapper(it, Character(it.name, it.birthYear, it.height, it.url))
+                stubMapper(it, CharacterInfo(it.name, it.url, it.birthYear, it.height, it.homeWorld, it.films, it.species))
             }
         }
 
@@ -52,10 +52,10 @@ class SearchCharactersRepositoryImplTest {
 
     @Test
     fun `searchCharacters calls mapper`() = runBlocking {
-        val charactersList = listOf(makeCharacterEntity(), makeCharacterEntity()).apply {
+        val charactersList = listOf(makeCharacterInfoEntity(), makeCharacterInfoEntity()).apply {
             stubRemote(this)
             forEach {
-                stubMapper(it, Character(it.name, it.birthYear, it.height, it.url))
+                stubMapper(it, CharacterInfo(it.name, it.url, it.birthYear, it.height, it.homeWorld, it.films, it.species))
             }
         }
 
@@ -71,11 +71,11 @@ class SearchCharactersRepositoryImplTest {
 
     @Test
     fun `searchCharacters returns data`() = runBlocking {
-        val domainCharacters = mutableListOf<Character>()
-        listOf(makeCharacterEntity(), makeCharacterEntity()).apply {
+        val domainCharacters = mutableListOf<CharacterInfo>()
+        listOf(makeCharacterInfoEntity(), makeCharacterInfoEntity()).apply {
             stubRemote(this)
             forEach {
-                val character = Character(it.name, it.birthYear, it.height, it.url)
+                val character = CharacterInfo(it.name, it.url, it.birthYear, it.height, it.homeWorld, it.films, it.species)
                 domainCharacters.add(character)
                 stubMapper(it, character)
             }
@@ -87,13 +87,13 @@ class SearchCharactersRepositoryImplTest {
         assertThat(result).isEqualTo(domainCharacters)
     }
 
-    private fun stubRemote(items: List<CharacterEntity>) {
+    private fun stubRemote(items: List<CharacterInfoEntity>) {
         coEvery {
             remote.searchCharacters(any())
         } returns items
     }
 
-    private fun stubMapper(item: CharacterEntity, domain: Character) {
+    private fun stubMapper(item: CharacterInfoEntity, domain: CharacterInfo) {
         coEvery {
             mapper.mapFromEntity(item)
         } returns domain

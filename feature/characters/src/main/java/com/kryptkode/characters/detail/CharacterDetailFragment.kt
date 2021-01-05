@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.kryptkode.characters.CharacterUi
 import com.kryptkode.characters.CharactersNavigator
 import com.kryptkode.characters.detail.view.CharacterDetailView
 import com.kryptkode.characters.detail.view.CharacterDetailViewFactory
+import com.kryptkode.characters.entities.CharacterUi
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

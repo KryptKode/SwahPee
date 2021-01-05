@@ -4,8 +4,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.kryptkode.characters.detail.FilmUi
 import com.kryptkode.characters.detail.view.CharacterDetailViewFactory
+import com.kryptkode.characters.entities.FilmUi
 
 
 class FilmListAdapter (

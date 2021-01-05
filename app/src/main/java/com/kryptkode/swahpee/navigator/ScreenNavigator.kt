@@ -2,8 +2,8 @@ package com.kryptkode.swahpee.navigator
 
 import android.app.Activity
 import androidx.navigation.findNavController
-import com.kryptkode.characters.CharacterUi
 import com.kryptkode.characters.CharactersNavigator
+import com.kryptkode.characters.entities.CharacterUi
 import com.kryptkode.characters.search.SearchCharactersFragmentDirections
 import com.kryptkode.swahpee.R
 import javax.inject.Inject

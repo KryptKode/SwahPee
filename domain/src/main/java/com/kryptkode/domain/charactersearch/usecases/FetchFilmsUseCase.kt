@@ -6,8 +6,9 @@ import com.kryptkode.domain.dispatchers.AppDispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
+import javax.inject.Inject
 
-class FetchFilmsUseCase(
+class FetchFilmsUseCase @Inject constructor(
         private val appDispatchers: AppDispatchers,
         private val repository: CharacterDetailRepository) {
 

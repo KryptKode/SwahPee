@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
-import com.kryptkode.characters.CharacterUi
+import com.kryptkode.characters.entities.CharacterUi
 import com.kryptkode.characters.search.view.SearchCharacterViewFactory
 import com.kryptkode.commonandroid.extension.beGone
 import com.kryptkode.commonandroid.extension.beVisible

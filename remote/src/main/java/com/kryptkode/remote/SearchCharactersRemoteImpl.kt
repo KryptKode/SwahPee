@@ -1,6 +1,6 @@
 package com.kryptkode.remote
 
-import com.kryptkode.data.charactersearch.entities.CharacterEntity
+import com.kryptkode.data.charactersearch.entities.CharacterInfoEntity
 import com.kryptkode.data.charactersearch.remote.SearchCharactersRemote
 import com.kryptkode.remote.api.SwahPeeServiceApi
 import com.kryptkode.remote.mapper.CharacterRemoteMapper
@@ -11,7 +11,7 @@ class SearchCharactersRemoteImpl @Inject constructor(
     private val mapper: CharacterRemoteMapper
 ) : SearchCharactersRemote {
 
-    override suspend fun searchCharacters(query: String): List<CharacterEntity> {
+    override suspend fun searchCharacters(query: String): List<CharacterInfoEntity> {
         return serviceApi.searchCharacters(query).results.map { character ->
             mapper.mapToEntity(character)
         }

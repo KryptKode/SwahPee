@@ -20,8 +20,8 @@ dependencies {
     implementation (Libs.constraintlayout)
 
     implementation (Libs.circleimageview)
-    implementation ("com.romandanylyk:pageindicatorview:1.0.3")
-    implementation ("androidx.viewpager2:viewpager2:1.0.0")
+    implementation (Libs.pageindicatorview)
+    implementation (Libs.viewpager2)
 
     implementation (Libs.fragment_ktx)
     implementation (Libs.timber)

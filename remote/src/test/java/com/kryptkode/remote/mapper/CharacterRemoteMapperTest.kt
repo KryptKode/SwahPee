@@ -19,9 +19,12 @@ class CharacterRemoteMapperTest {
         val testCharacter = MockDataFactory.makeCharacterRemote()
         val result = sut.mapToEntity(testCharacter)
 
-        assertThat(result.birthYear).isEqualTo(testCharacter.birthYear)
-        assertThat(result.height).isEqualTo(testCharacter.height)
         assertThat(result.name).isEqualTo(testCharacter.name)
         assertThat(result.url).isEqualTo(testCharacter.url)
+        assertThat(result.birthYear).isEqualTo(testCharacter.birthYear)
+        assertThat(result.height).isEqualTo(testCharacter.height)
+        assertThat(result.homeWorld).isEqualTo(testCharacter.homeWorld)
+        assertThat(result.films).isEqualTo(testCharacter.films)
+        assertThat(result.species).isEqualTo(testCharacter.species)
     }
 }

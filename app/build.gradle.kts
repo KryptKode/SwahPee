@@ -42,6 +42,7 @@ dependencies {
     implementation(project(Modules.domain))
     implementation(project(Modules.data))
     implementation(project(Modules.remote))
+    implementation(project(Modules.cache))
 
     implementation(Libs.kotlin_stdlib)
     implementation(Libs.core_ktx)

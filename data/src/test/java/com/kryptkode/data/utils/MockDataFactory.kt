@@ -1,13 +1,7 @@
 package com.kryptkode.data.utils
 
-import com.kryptkode.data.charactersearch.entities.CharacterEntity
-import com.kryptkode.data.charactersearch.entities.FilmEntity
-import com.kryptkode.data.charactersearch.entities.PlanetEntity
-import com.kryptkode.data.charactersearch.entities.SpecieEntity
-import com.kryptkode.domain.charactersearch.entities.Character
-import com.kryptkode.domain.charactersearch.entities.Film
-import com.kryptkode.domain.charactersearch.entities.Planet
-import com.kryptkode.domain.charactersearch.entities.Specie
+import com.kryptkode.data.charactersearch.entities.*
+import com.kryptkode.domain.charactersearch.entities.*
 import com.kryptkode.testshared.DataFactory.randomString
 
 object MockDataFactory {
@@ -27,6 +21,30 @@ object MockDataFactory {
             randomString(),
             randomString(),
             randomString(),
+        )
+    }
+
+    fun makeCharacterInfoEntity(): CharacterInfoEntity {
+        return CharacterInfoEntity(
+            randomString(),
+            randomString(),
+            randomString(),
+            randomString(),
+            randomString(),
+            listOf(randomString(), randomString(), randomString()),
+            listOf(randomString(), randomString())
+        )
+    }
+
+    fun makeDomainCharacterInfo(): CharacterInfo {
+        return CharacterInfo(
+            randomString(),
+            randomString(),
+            randomString(),
+            randomString(),
+            randomString(),
+            listOf(randomString(), randomString(), randomString()),
+            listOf(randomString(), randomString())
         )
     }
 

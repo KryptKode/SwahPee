@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:text="@string/title_planet"
             android:drawablePadding="8dp"
+            android:gravity="center|start"
             android:layout_marginTop="16dp"
             android:textAppearance="@style/TextAppearance.App.ListPrimary"
             app:drawableStartCompat="@drawable/ic_planet"

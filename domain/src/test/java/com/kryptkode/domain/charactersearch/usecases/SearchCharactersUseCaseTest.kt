@@ -1,10 +1,11 @@
 package com.kryptkode.domain.charactersearch.usecases
 
 import com.google.common.truth.Truth.assertThat
-import com.kryptkode.domain.charactersearch.entities.Character
+import com.kryptkode.domain.charactersearch.entities.CharacterInfo
+import com.kryptkode.domain.charactersearch.repo.CharacterDetailRepository
 import com.kryptkode.domain.charactersearch.repo.SearchCharactersRepository
 import com.kryptkode.domain.dispatchers.AppDispatchers
-import com.kryptkode.domain.utils.MockDataFactory.makeDomainCharacter
+import com.kryptkode.domain.utils.MockDataFactory.makeDomainCharacterInfo
 import com.kryptkode.testshared.DataFactory.randomString
 import io.mockk.every
 import io.mockk.mockk
@@ -23,14 +24,17 @@ import org.junit.Test
 class SearchCharactersUseCaseTest {
 
     private lateinit var dispatchers: AppDispatchers
-    private lateinit var repository: SearchCharactersRepository
-    private lateinit var SUT: SearchCharactersUseCase
+    private lateinit var searchCharactersRepository: SearchCharactersRepository
+    private lateinit var charactersRepository: CharacterDetailRepository
+    private lateinit var sut: SearchCharactersUseCase
 
     @Before
     fun setup() {
         dispatchers = mockk()
-        repository = mockk()
-        SUT = SearchCharactersUseCase(dispatchers, repository)
+        searchCharactersRepository = mockk()
+        charactersRepository = mockk()
+        sut =
+            SearchCharactersUseCase(dispatchers, charactersRepository, searchCharactersRepository)
     }
 
     @After
@@ -43,20 +47,20 @@ class SearchCharactersUseCaseTest {
         stubDispatchers()
         stubRepo()
         val testQuery = randomString()
-        SUT.searchCharacters(testQuery)
+        sut.searchCharacters(testQuery)
         verify(exactly = 1) {
-            repository.searchCharacters(testQuery)
+            searchCharactersRepository.searchCharacters(testQuery)
         }
     }
 
     @Test
     fun `searching characters returns data`() = runBlocking {
         stubDispatchers()
-        val testCharacters = listOf(makeDomainCharacter(), makeDomainCharacter())
+        val testCharacters = listOf(makeDomainCharacterInfo(), makeDomainCharacterInfo())
         stubRepo(testCharacters)
 
         val testQuery = randomString()
-        val result = SUT.searchCharacters(testQuery).first()
+        val result = sut.searchCharacters(testQuery).first()
 
         assertThat(result).isEqualTo(testCharacters)
     }
@@ -67,7 +71,7 @@ class SearchCharactersUseCaseTest {
         stubRepo()
 
         val testQuery = randomString()
-        SUT.searchCharacters(testQuery)
+        sut.searchCharacters(testQuery)
         verify(exactly = 1) {
             dispatchers.io
         }
@@ -87,9 +91,9 @@ class SearchCharactersUseCaseTest {
         } returns TestCoroutineDispatcher()
     }
 
-    private fun stubRepo(list: List<Character> = emptyList()) {
+    private fun stubRepo(list: List<CharacterInfo> = emptyList()) {
         every {
-            repository.searchCharacters(any())
+            searchCharactersRepository.searchCharacters(any())
         } returns flowOf(list)
     }
 }

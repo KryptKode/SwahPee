@@ -21,7 +21,7 @@
         tools:layout="@layout/layout_character_detail" >
         <argument
             android:name="character"
-            app:argType="com.kryptkode.characters.CharacterUi" />
+            app:argType="com.kryptkode.characters.entities.CharacterUi" />
     </fragment>
 
 

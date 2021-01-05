@@ -1,17 +1,20 @@
 package com.kryptkode.remote.mapper
 
-import com.kryptkode.data.charactersearch.entities.CharacterEntity
+import com.kryptkode.data.charactersearch.entities.CharacterInfoEntity
 import com.kryptkode.remote.entities.character.CharacterRemote
 import javax.inject.Inject
 
-class CharacterRemoteMapper @Inject constructor() : DataEntityMapper<CharacterRemote, CharacterEntity> {
+class CharacterRemoteMapper @Inject constructor() : DataEntityMapper<CharacterRemote, CharacterInfoEntity> {
 
-    override fun mapToEntity(remote: CharacterRemote): CharacterEntity {
-        return CharacterEntity(
+    override fun mapToEntity(remote: CharacterRemote): CharacterInfoEntity {
+        return CharacterInfoEntity(
             remote.name,
+            remote.url,
             remote.birthYear,
             remote.height,
-            remote.url
+            remote.homeWorld,
+            remote.films,
+            remote.species
         )
     }
 }

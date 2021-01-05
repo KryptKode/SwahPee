@@ -25,6 +25,10 @@ public object Versions {
 
     public const val androidx_hilt: String = "1.0.0-alpha02"
 
+    public const val androidx_room: String = "2.3.0-alpha04"
+
+    public const val androidx_work: String = "2.4.0"
+
     public const val com_android_tools_build_gradle: String = "4.1.1"
 
     public const val androidx_test_ext_junit: String = "1.1.2"
@@ -47,6 +51,8 @@ public object Versions {
 
     public const val kotlin_gradle_plugin: String = "1.4.21" // available: "1.4.21-2"
 
+    public const val pageindicatorview: String = "1.0.3"
+
     public const val constraintlayout: String = "2.0.4"
 
     public const val circleimageview: String = "3.1.0"
@@ -66,6 +72,8 @@ public object Versions {
     public const val lint_gradle: String = "27.1.1"
 
     public const val viewbinding: String = "4.1.1"
+
+    public const val viewpager2: String = "1.0.0"
 
     public const val appcompat: String = "1.2.0"
 

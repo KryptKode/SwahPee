@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.kryptkode.characters.CharacterUi
 import com.kryptkode.characters.CharactersNavigator
+import com.kryptkode.characters.entities.CharacterUi
 import com.kryptkode.characters.search.view.SearchCharacterViewFactory
 import com.kryptkode.characters.search.view.listview.CharacterListView
 import com.kryptkode.commonandroid.ToastHelper

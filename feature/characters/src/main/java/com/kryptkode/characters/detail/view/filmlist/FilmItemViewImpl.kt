@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.kryptkode.characters.detail.FilmUi
+import com.kryptkode.characters.entities.FilmUi
 import com.kryptkode.search.databinding.ItemFilmBinding
 
 @SuppressLint("DefaultLocale")

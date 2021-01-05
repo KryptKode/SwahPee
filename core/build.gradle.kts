@@ -7,6 +7,7 @@ dependencies {
     implementation(project(Modules.domain))
     implementation(project(Modules.data))
     implementation(project(Modules.remote))
+    implementation(project(Modules.cache))
     implementation(project(Modules.commonAndroid))
 
 
