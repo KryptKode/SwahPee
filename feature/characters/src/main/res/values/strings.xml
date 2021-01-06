@@ -15,4 +15,7 @@
     <string name="character_height">%1$scm\n%2$sinches</string>
     <string name="character_birth_year">Born on %1$s</string>
     <string name="height_label">Height</string>
+    <string name="retry_btn_text">Retry</string>
+    <string name="error_img_cd">Cloud image</string>
+    <string name="language_label">Language: %s</string>
 </resources>

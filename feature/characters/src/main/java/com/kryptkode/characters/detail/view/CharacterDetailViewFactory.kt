@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.kryptkode.characters.detail.view.filmlist.FilmItemView
 import com.kryptkode.characters.detail.view.filmlist.FilmItemViewImpl
+import com.kryptkode.characters.detail.view.specieslist.SpeciesItemView
+import com.kryptkode.characters.detail.view.specieslist.SpeciesItemViewImpl
 import javax.inject.Inject
 
 class CharacterDetailViewFactory @Inject constructor(
@@ -14,6 +16,13 @@ class CharacterDetailViewFactory @Inject constructor(
         return FilmItemViewImpl(
             layoutInflater,
             parent
+        )
+    }
+
+    fun getSpeciesItemView(parent: ViewGroup? = null): SpeciesItemView {
+        return SpeciesItemViewImpl(
+                layoutInflater,
+                parent
         )
     }
 

@@ -10,6 +10,8 @@ dependencies {
     implementation(project(Modules.cache))
     implementation(project(Modules.commonAndroid))
 
+    implementation(Libs.room_ktx)
+    implementation(Libs.room_runtime)
 
     implementation(Libs.appcompat)
     implementation(Libs.kotlinx_coroutines_core)

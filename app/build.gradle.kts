@@ -50,6 +50,9 @@ dependencies {
 
     implementation(Libs.moshi_kotlin)
 
+    implementation(Libs.room_ktx)
+    implementation(Libs.room_runtime)
+
     implementation(Libs.constraintlayout)
     implementation(Libs.material)
 

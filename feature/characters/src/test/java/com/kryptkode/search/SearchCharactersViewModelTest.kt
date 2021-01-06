@@ -43,7 +43,6 @@ class SearchCharactersViewModelTest {
             characterUiMapper,
             dispatchers,
         )
-
     }
 
     @Test

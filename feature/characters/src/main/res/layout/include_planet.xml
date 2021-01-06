@@ -15,10 +15,10 @@
             android:id="@+id/tv_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/title_planet"
+            android:layout_marginTop="16dp"
             android:drawablePadding="8dp"
             android:gravity="center|start"
-            android:layout_marginTop="16dp"
+            android:text="@string/title_planet"
             android:textAppearance="@style/TextAppearance.App.ListPrimary"
             app:drawableStartCompat="@drawable/ic_planet"
             app:layout_constraintBottom_toBottomOf="@id/image"
@@ -54,8 +54,57 @@
             android:id="@+id/planet_views"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
+            android:visibility="gone"
             app:constraint_referenced_ids="tv_name,tv_population" />
+
+
+        <ImageView
+            android:id="@+id/error_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/error_img_cd"
+            app:layout_constraintBottom_toTopOf="@id/loading_text_view"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_cloud" />
+
+        <TextView
+            android:id="@+id/error_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.App.Body"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/progress_bar"
+            app:layout_constraintWidth_max="256dp"
+            tools:text="An error occurred. Please retry" />
+
+
+        <Button
+            android:id="@+id/retry_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.App.Button.TextButton"
+            android:text="@string/retry_btn_text"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/error_text_view" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/error_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="error_image,error_text_view,retry_button" />
 
 
         <ProgressBar
@@ -86,11 +135,11 @@
 
 
         <androidx.constraintlayout.widget.Group
-            android:id="@+id/search_hint_group"
+            android:id="@+id/loading_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="visible"
-            app:constraint_referenced_ids="search_hint_image,search_hint_text_view" />
+            app:constraint_referenced_ids="progress_bar,loading_text_view" />
 
 
         <include layout="@layout/guidelines" />
