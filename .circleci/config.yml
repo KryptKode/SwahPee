@@ -21,9 +21,15 @@ jobs:
           path: build/reports
 
       - run:
-          name: Run Unit tests
-          command: ./gradlew testDebugUnitTest
+          name: Run detekt
+          command: ./gradlew detektAll
       - store_artifacts:
-          path: build/reports
+          path: build/staticAnalysis
+
+      - run:
+          name: Run Domain Unit Tests
+          command: ./gradlew :domain:test
+      - store_artifacts:
+          path: domain/build/reports
       - store_test_results:
-          path: build/test-results
+          path: domain/build/test-results
